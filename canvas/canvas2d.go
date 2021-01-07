@@ -72,13 +72,13 @@ func NewCanvas2d(create bool) (*Canvas2d, error) {
 // This also calls Set to create relevant shadow Buffer etc
 
 // TODO suspect this needs to be fleshed out with more options
-func (c *Canvas2d) Create(width int, height int) {
-
+func (c *Canvas2d) Create(width int, height int, id string) {
 	// Make the Canvas
 	canvas := c.doc.Call("createElement", "canvas")
 
 	canvas.Set("height", height)
 	canvas.Set("width", width)
+	canvas.Set("id", id)
 	c.body.Call("appendChild", canvas)
 
 	c.Set(canvas, width, height)

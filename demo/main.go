@@ -47,7 +47,7 @@ func main() {
 	//cvs, _ = canvas.NewCanvas2d(true)
 
 	cvs, _ = canvas.NewCanvas2d(false)
-	cvs.Create(int(js.Global().Get("innerWidth").Float()*0.9), int(js.Global().Get("innerHeight").Float()*0.9)) // Make Canvas 90% of window size.  For testing rendering canvas smaller than full windows
+	cvs.Create(int(js.Global().Get("innerWidth").Float()*0.9), int(js.Global().Get("innerHeight").Float()*0.9), "") // Make Canvas 90% of window size.  For testing rendering canvas smaller than full windows
 
 	height = float64(cvs.Height())
 	width = float64(cvs.Width())
